@@ -3,16 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Sean Mak Feng Shu - Cloud & Infrastructure Engineer Resume</title>
+    <style>
+        :root {
+            --primary-color: #0078d4; /* Azure Blue */
+            --text-dark: #242424;
+            --text-light: #595959;
+            --bg-light: #f3f2f1;
+            --border-color: #e1dfdd;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-right: 25px;
+        }
+
+        .header-text h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+        }
+
+        .header-text .target-title {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Section Layouts */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+        }
+
+        /* Experience Elements */
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .job-title-company h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .job-title-company span {
+            font-weight: normal;
+            color: var(--text-light);
+        }
+
+        .job-meta {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .job-meta em {
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .job-details {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .job-details strong {
+            color: var(--primary-color);
+        }
+
+        ul {
+            margin: 0 0 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        /* Grid Framework for Skills & Particulars */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skills-category {
+            margin-bottom: 12px;
+        }
+
+        .skills-category strong {
+            display: inline-block;
+            width: 180px;
+            color: var(--text-dark);
+        }
+
+        .particulars-row {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .particulars-row strong {
+            display: inline-block;
+            width: 130px;
+        }
+
+        /* Serverless Counter Box Accent */
+        .counter-box {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        #counter {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .job-meta {
+                text-align: left;
+                margin-top: 5px;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>My Online Resume</h1>
-    <p>Welcome to my profile page!</p>
-    
-    <!-- This is what prints the counter number -->
-    <p>You are visitor number: <span id="counter">Loading...</span></p>
 
-    <!-- Connects your app logic script -->
-    <script src="app.js"></script>
-</body>
-</html>
+<div class="container">
+    <header>
+        <img src="photo.jpg" alt="Sean Mak Feng Shu" class="profile-img">
+        <div class="header-text">
+            <h1>Sean Mak Feng Shu</h1>
+            <div class="target-title">Seeking position as an Azure/Cloud or Cloud Infrastructure Engineer</div>
+            <div class="contact-info">
+                BLK 751 Choa Chu Kang North 5, Singapore 680751<br>
+                HP: +65 8489 3688 | Email: seanmak72@gmail.com
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>Objective</h2>
+        <p>Seeking for position as an Azure/Cloud or Cloud Infrastructure engineer.</p>
+    </section>
+
+    <section>
+        <h2>Summary</h2>
+        <p>I am an IT Systems Administrator with 7 years of experience supporting Windows enterprise environments, infrastructure, endpoint systems and network related issues. Experienced in Windows administration, system patching, troubleshooting, RDP, software testing and deployment, Windows migration, server room operations and infrastructure support. Microsoft Azure fundamentals certified ( AZ-900 ) with formal training in Cloud Computing and Server and System Administration. Currently preparing for Microsoft Azure Administrator certification( AZ-104 ) and seeking to transition into a Cloud/Azure Engineer or Cloud Infrastructure role.</p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-category"><strong>Cloud:</strong> Microsoft Azure, Azure Fundamentals (AZ-900), Cloud Computing</div>
+        <div class="skills-category"><strong>Systems Administration:</strong> Windows, Windows migration, Windows profiles, system patching, software deployment, Hyper-V</div>
+        <div class="skills-category"><strong>Infrastructure:</strong> Server-room operations, server rack maintenance, endpoint infrastructure, hardware/software troubleshooting</div>
+        <div class="skills-category"><strong>Networking:</strong> Network troubleshooting, RDP, Internet connectivity, network printers, VOIP</div>
+        <div class="skills-category"><strong>IT Operations:</strong> Incident troubleshooting, technology refresh, software testing/deployment, user onboarding, vendor escalation</div>
+        <div class="skills-category"><strong>Administration:</strong> Microsoft Windows environments, endpoint maintenance, asset support</div>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+
+        <!-- Job 1 -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">
+                    <h3>IT Support Specialist <span>— Robert Half International PTE. LTD.</span></h3>
+                </div>
+                <div class="job-meta">
+                    <em>December 2025 - Present</em>
+                </div>
+            </div>
+            <div class="job-details">
+                <strong>Project:</strong> Lubrizol | 
+                <strong>Reason for leaving:</strong> Technical growth and alignment with industry trends
+            </div>
+            <ul>
+                <li>Provide technical support for Windows-based endpoint environments across plant and administrative users.</li>
+                <li>Configure Windows profiles and prepare systems for new-user onboarding. Update security patches weekly.</li>
+                <li>Perform regular security patching and endpoint updates to maintain system readiness and security.</li>
+                <li>Troubleshoot RDP, Internet connectivity, system performance and other network-related issues.</li>
+                <li>Diagnose technical problems, determine appropriate solutions and escalate hardware issues to vendors when required.</li>
+                <li>Support technology refresh activities for laptops and desktops.</li>
+                <li>Provide troubleshooting support for network printers, VOIP phones and other workplace infrastructure.</li>
+                <li>Supported IT requirements for a three-month laboratory renovation project as the main IT site support.</li>
+                <li>Gained exposure to deployment and configuration of Hyper-V environments.</li>
+            </ul>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">
+                    <h3>IT Systems Administrator <span>— ITEASYCO PTE. LTD.</span></h3>
+                </div>
+                <div class="job-meta">
+                    <em>October 2023 – December 2025</em>
+                </div>
+            </div>
+            <div class="job-details">
+                <strong>Project:</strong> China International Capital Corporation ( CICC ) | 
+                <strong>Reason for leaving:</strong> Expand experience and widen my career growth opportunities
+            </div>
+            <ul>
+
